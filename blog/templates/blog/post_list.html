@@ -3,8 +3,18 @@
     <title>Blog Test</title>
   </head>
   <body>
-    <p>집가고싶다</p>
-    <p>게임하고싶다</p>
-    <p>아톰으로 저장하면 한글 깨지겠지</P>
+    <div>
+      <p>집가고싶다</p>
+      <p>게임하고싶다</p>
+      <p>아톰으로 저장하면 한글 깨지겠지</P>
+    </div>
+
+    {% for post in posts%}
+      <div>
+        <h2> {{post.title}} </h2>
+        <p> {{post.created_date}} </p>
+        <p> {{post.text}} </p>
+      </div>
+    {% endfor %}
   </body>
 </html>
