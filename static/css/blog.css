@@ -1,0 +1,26 @@
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: NanumBarunGothic;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.page-header {
+  background-color: #00FFFF;
+  width: 100%;
+  padding: 30px 10px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+p {
+  padding-left: 10px;
+}
+
+
+h2 {
+  color: #006687;
+}

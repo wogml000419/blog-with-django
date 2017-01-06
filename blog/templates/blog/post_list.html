@@ -1,21 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
 <html>
   <head>
     <title>Blog Test</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
+    <!--link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
+-->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css">
   </head>
   <body>
-    <div>
-      <p>집가고싶다</p>
-      <p>게임하고싶다</p>
-      <p>아톰으로 저장하면 한글 깨지겠지</P>
+    <div class = "page-header">
+      <a href='/'> <h1>집가고싶다</h1> </a>
     </div>
 
-    {% for post in posts%}
-      <div>
-        <h2> {{post.title}} </h2>
-        <p> {{post.created_date}} </p>
-        <p> {{post.text | linebreaks}} </p>
-      </div>
-    {% endfor %}
+    <div class = "contents">
+      {% for post in posts %}
+        <div class = "post">
+          <a href=''> <h2 class = "post-title">{{post.title}}</h2> </a>
+          <p class = "post-date"> {{post.created_date}} </p>
+           {{post.text | linebreaks}} 
+        </div>
+      {% endfor %}
+    </div>
   </body>
 </html>
