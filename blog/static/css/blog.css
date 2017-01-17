@@ -81,4 +81,14 @@ p {
 
 .save {
   float: right;
+  background-color: #078DD9;
+  color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3%;
+}
+
+.edit .edit:hover .edit:visited {
+  display: inline-block;
+  color: rgb(98, 98, 98);
+  text-decoration: none;
 }
